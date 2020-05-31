@@ -51,11 +51,11 @@ if any error with password encryption (depending on the php version), use this:
 ## CREATE USER & CONFIGURE PASSWORD FOR MYSQL
 For access from localhost:
 - CREATE USER '**aditya**'@'**localhost**' IDENTIFIED WITH *caching_sha2_password* BY '**password**';
-- GRANT ALL PRIVILEGES ON *.* TO '**aditya**'@'**localhost**' WITH GRANT OPTION;
+- GRANT ALL PRIVILEGES ON \*.* TO '**aditya**'@'**localhost**' WITH GRANT OPTION;
 
 For access from wildcard:
 - CREATE USER '**aditya**'@'**%**' IDENTIFIED WITH *caching_sha2_password* BY '**password**';
-- GRANT ALL PRIVILEGES ON *.* TO '**aditya**'@'**%**' WITH GRANT OPTION;
+- GRANT ALL PRIVILEGES ON \*.* TO '**aditya**'@'**%**' WITH GRANT OPTION;
 
 Reloads the grant tables:
 - FLUSH PRIVILIGES;
