@@ -3,8 +3,28 @@
 Tested on Ubuntu 20.04 Focal
 
 ## CREATING NEW USER
-- adduser **aditya**
-- usermod -aG sudo **aditya**
+- \# adduser **aditya**
+- \# usermod -aG sudo **aditya**
+
+## USER PERMISSION
+
+Add **user** into **www-data** group
+- \# usermod -a -G **www-data** **aditya**
+
+Ensure files in our web root are of group **www-data**
+- \# chown -R www-data:www-data /var/www
+
+Give user the ability to **rwx** web files
+- \# setfacl -R -m u:**aditya**:rwx /var/www
+
+Add group-based permissions, this allows anyone in group **www-data** to **rwx** web files
+- \# setfacl -R -m g:**www-data**:rwx /var/www
+
+View changes
+- \# getfacl /var/www
+
+If needed
+- \# chmod -R 755 /var/www
 
 ## INSTALLING UPDATE AND NECESSARY SOFTWARE
 - sudo apt update
@@ -39,10 +59,9 @@ Tested on Ubuntu 20.04 Focal
 - sudo service apache2 restart
 
 ## CONFIGURE PASSWORD FOR MYSQL ROOT ACCOUNT
- - sudo mysql
- - SELECT user,authentication_string,plugin,host FROM mysql.user;
- - ALTER USER '**root**'@'localhost' IDENTIFIED WITH *caching_sha2_password* BY '**password**';
- 
+- sudo mysql
+- SELECT user,authentication_string,plugin,host FROM mysql.user;
+- ALTER USER '**root**'@'localhost' IDENTIFIED WITH *caching_sha2_password* BY '**password**'; 
 if any error with password encryption (depending on the php version), use this:
 - ALTER USER '**root**'@'localhost' IDENTIFIED WITH *mysql_native_password* BY '**password**';
 - SELECT user,authentication_string,plugin,host FROM mysql.user;
