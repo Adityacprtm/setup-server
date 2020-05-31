@@ -42,10 +42,11 @@ Tested on Ubuntu 20.04 Focal
  - sudo mysql
  - SELECT user,authentication_string,plugin,host FROM mysql.user;
  - ALTER USER '**root**'@'localhost' IDENTIFIED WITH *caching_sha2_password* BY '**password**';
+ 
 if any error with password encryption (depending on the php version), use this:
-	 - ALTER USER '**root**'@'localhost' IDENTIFIED WITH *mysql_native_password* BY '**password**';
+- ALTER USER '**root**'@'localhost' IDENTIFIED WITH *mysql_native_password* BY '**password**';
 - SELECT user,authentication_string,plugin,host FROM mysql.user;
-mysql -u root -p
+- mysql -u root -p
 
 ## CREATE USER & CONFIGURE PASSWORD FOR MYSQL
 For access from localhost:
