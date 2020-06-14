@@ -50,7 +50,11 @@ If needed
         DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
 </IfModule>
 ```
-
+- if needed (replace the PHP version used)
+```
+sudo apt-get install php5.6 libapache2-mod-php5.6 php5.6-common php5.6-mbstring php5.6-xmlrpc php5.6-soap php5.6-gd php5.6-xml php5.6-mysql php5.6-cli php5.6-mcrypt php5.6-zip
+```
+**Note:** php-mcrypt has been removed from php7.2
 
 ## INSTALLING PHPMYADMIN
 - sudo apt update
