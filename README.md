@@ -1,6 +1,20 @@
-# Setup Server Ubuntu
+# Setup LAMP Server Ubuntu
 
-Tested on Ubuntu 20.04 Focal
+**Tested on Ubuntu 20.04 Focal**
+
+# Table of Contents
+1. [CREATING NEW USER](#creating-new-user)
+2. [USER PERMISSION](#user-permission)
+3. [INSTALLING UPDATE AND NECESSARY SOFTWARE](#installing-update-and-necessary-software)
+4. [INSTALLING APACHE](#installing-apache)
+5. [INSTALLING MYSQL](#installing-mysql)
+6. [INSTALLING PHP](#installing-php)
+7. [INSTALLING PHPMYADMIN](#installing-phpmyadmin)
+8. [CONFIGURE PASSWORD FOR MYSQL ROOT ACCOUNT](#configure-password-for-mysql-root-account)
+9. [CREATE USER & CONFIGURE PASSWORD FOR MYSQL](#create-user--configure-password-for-mysql)
+10. [INSTALLING PYTHON ](#installing-python)
+11. [NSTALLING NODEJS](#installing-nodejs)
+12. [INSTALLING COMPOSER](#installing-composer)
 
 ## CREATING NEW USER
 - \# adduser **aditya**
